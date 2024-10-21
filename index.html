@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Bucin Notification iOS Style</title>
+  <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+  <div class="lockscreen">
+    <div class="time">
+      <h1 id="time"></h1>
+      <p id="date"></p>
+    </div>
+  </div>
+  
+  <div id="popup-container"></div>
+
+  <!-- WhatsApp message form -->
+  <div id="whatsapp-container" class="popup hidden">
+    <div class="popup-content">
+      <h2>Kirim Pesan WhatsApp</h2>
+      <textarea id="whatsapp-message" placeholder="Tulis pesanmu di sini..."></textarea>
+      <button id="send-whatsapp">Kirim Pesan ke WhatsApp</button>
+    </div>
+  </div>
+
+  <script src="script.js"></script>
+</body>
+</html>

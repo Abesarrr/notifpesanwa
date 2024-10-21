@@ -1,0 +1,243 @@
+/* Global Styles */
+body {
+    margin: 0;
+    font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, sans-serif;
+    background: url('https://w0.peakpx.com/wallpaper/159/721/HD-wallpaper-aesthetic-clouds-aesthetic-violet-amoled-black-dark-iphone-lilac-night-one-plus-thumbnail.jpg') no-repeat center center fixed;
+    background-size: cover;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    overflow: hidden;
+  }
+  
+  /* Lockscreen UI */
+  .lockscreen {
+    text-align: center;
+    color: white;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    position: relative;
+    z-index: 1; /* Pastikan jam ada di lapisan bawah */
+    top:-200px;
+  }
+  
+  .time h1 {
+    font-size: 64px;
+    margin: 0;
+  }
+  
+  .time p {
+    margin: 0;
+    font-size: 20px;
+  }
+  
+  @keyframes fadeIn {
+    from {
+      opacity: 0;
+      transform: translateX(0px);
+    }
+    to {
+      opacity: 1;
+      transform: translateX(0);
+    }
+  }
+  
+  /* Notification WhatsApp Style */
+  .whatsapp-notification {
+    opacity: 0;
+    transition: opacity 0.5s ease, transform 0.5s ease;
+    position: absolute;
+    bottom: 50%; /* Mengatur jarak dari bawah */
+    left: 50%; /* Posisikan di tengah horizontal */
+    transform: translateX(-50%); /* Agar tepat di tengah */
+    text-align: left;
+    background-color: rgba(255, 255, 255, 0.8);
+    border-radius: 14px;
+    padding: 12px;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.15);
+    backdrop-filter: blur(10px);
+    max-width: 90%;
+    width: 300px;
+    z-index: 100; /* Pastikan notifikasi berada di atas elemen lain */
+}
+
+.whatsapp-notification.show {
+    opacity: 1;
+    transform: translate(-50%, 0); /* Mempertahankan posisi tengah saat muncul */
+}
+
+  
+  .notification-header {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+  }
+  
+  .whatsapp-icon {
+    width: 20px;
+    height: 20px;
+    margin-right: 8px;
+  }
+  
+  .whatsapp-label {
+    font-size: 14px;
+    color: #000;
+    font-weight: bold;
+  }
+  
+  .notification-time {
+    font-size: 14px;
+    color: gray;
+    margin-left: auto;
+  }
+  
+  .notification-body {
+    margin-top: 10px;
+  }
+  
+  .contact-info {
+    display: flex;
+    align-items: center;
+  }
+  
+  .profile-picture {
+    width: 30px;
+    height: 30px;
+    border-radius: 50%;
+    object-fit: cover;
+    border: 2px solid #34b7f1;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.2);
+    margin-right: 10px;
+  }
+  
+  .contact-name {
+    font-weight: bold;
+    font-size: 18px;
+    color: #333;
+  }
+  
+  .message-text {
+    font-size: 14px;
+    color: #333;
+    margin-top: 5px;
+  }
+  
+  .next-message-btn {
+    margin-top: 20px;
+    padding: 12px 24px;
+    background-color: #34b7f1;
+    color: white;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    font-size: 16px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+    transition: background-color 0.3s, transform 0.2s;
+  }
+  
+  .next-message-btn:hover {
+    background-color: #2192c9;
+    transform: translateY(-2px);
+  }
+  
+  .next-message-btn:active {
+    transform: translateY(0);
+  }
+  
+  /* Popup Styles */
+  .popup {
+    position: fixed;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    width: 310px;
+    background-color: rgba(255, 255, 255, 0.9);
+    border-radius: 15px;
+    box-shadow: 0 4px 20px rgba(0, 0, 0, 0.2);
+    z-index: 1000;
+    padding: 10px;
+    backdrop-filter: blur(10px);
+  }
+  
+  .popup.hidden {
+    display: none;
+  }
+  
+  .popup-content {
+    text-align: center;
+  }
+  
+  .popup h2 {
+    margin-bottom: 15px;
+    font-size: 18px;
+    color: #333;
+  }
+  
+  textarea {
+    width: 90%;
+    height: 85px;
+    border-radius: 10px;
+    border: 0.5px solid #ccc;
+    padding: 10px;
+    font-size: 14px;
+    color: #333;
+  }
+  
+  button {
+    background-color: #007bff;
+    color: white;
+    border: none;
+    border-radius: 5px;
+    padding: 10px 15px;
+    cursor: pointer;
+    margin: 5px;
+    font-size: 14px;
+    transition: background-color 0.3s;
+  }
+  
+  button:hover {
+    background-color: #0056b3;
+  }
+  
+  /* iOS Notification Style */
+  .ios-notification {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translateX(-50%);
+    background-color: rgba(255, 255, 255, 0.8);
+    border-radius: 14px;
+    padding: 12px;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.15);
+    backdrop-filter: blur(10px);
+    max-width: 90%;
+    width: 300px;
+    cursor: pointer;
+    z-index: 1;
+  }
+  
+  .ios-notification-content {
+    display: flex;
+    text-align: left;
+  }
+  
+  .ios-notification .whatsapp-icon {
+    width: 30px;
+    height: 30px;
+    margin-right: 10px;
+  }
+  
+  .ios-notification-text strong {
+    font-size: 16px;
+    color: #000;
+  }
+  
+  .ios-notification-text p {
+    margin: 0;
+    font-size: 14px;
+    color: #555;
+  }
+  
